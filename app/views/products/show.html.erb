@@ -1,0 +1,16 @@
+<div class="container">
+   <div class="rows"> 
+      <div class="col-xs-12">
+        <p> <strong> Product Name: </strong> <%= @product.name %> </p>
+        <p> <strong> Size: </strong> <%= @product.quantity %> </p>
+        <p> <strong> Brands: </strong> <%= @product.brands %> </p>
+        <p> <strong> Categories: </strong> <%= @product.categories %> </p>
+        <p> <strong> Ingredients: </strong> <%= @product.ingredients %> </p>
+        <p> <strong> UPC Code: </strong> <%= @product.upc_code %> </p>
+        <p> <strong> <%= image_tag(@product.image, class:"img-size-add-small") %>
+
+        <h4> Back to <%= link_to 'List of Products', products_path %> </h4>
+
+      </div>
+   </div>
+</div>

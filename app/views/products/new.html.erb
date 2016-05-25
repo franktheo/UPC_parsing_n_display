@@ -1,0 +1,17 @@
+<div class="container">
+   <div class="rows">
+      <div class="col-xs-12">
+        <p></p>
+        <p>API: http://world.openfoodfacts.org/api/v0/product/upc_code.json<p>
+        <%= form_for(:product, :url => {:controller => 'products', :action => 'create'}) do |form| %>
+           <%= render form %>
+           <%= form.submit 'submit', class: 'btn btn-primary btn-xs' %> 
+           or <%= link_to 'cancel', root_path, class: 'btn btn-primary btn-xs' %>
+        <% end %>
+        <p></p>
+        <%= flash[:product] %>
+
+        <h4> Click here for <%= link_to 'List of products', products_path %> </h4>
+      </div>
+   </div>
+</div>
